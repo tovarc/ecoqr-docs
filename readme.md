@@ -1,6 +1,4 @@
-
-```markdown
-# Documentación del Backend
+Documentación del Backend
 
 Lo primero que debes configurar son las variables de entorno siguiendo esta estructura:
 
