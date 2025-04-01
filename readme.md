@@ -4,17 +4,26 @@
 
 Lo primero que debes configurar son las variables de entorno siguiendo esta estructura:
 
-```plaintext
-# Este valor se usa para configurar los JWT tokens que gestionan la autenticación. Puedes generar una clave secreta usando el comando 'openssl rand -hex 32' en la terminal o usar una de tu preferencia, pero debe ser segura.
+Este valor se usa para configurar los JWT tokens que gestionan la autenticación. Puedes generar una clave secreta usando el comando 'openssl rand -hex 32' en la terminal o usar una de tu preferencia, pero debe ser segura.
+
+
+```bash
 SECRET_KEY=secret
+```
 
-# Este es el algoritmo a usar en los tokens. Realmente no hace falta que lo cambies, ya que HS256 funciona bastante bien.
+Este es el algoritmo a usar en los tokens. Realmente no hace falta que lo cambies, ya que HS256 funciona bastante bien.
+
+```bash
 ALGORITHM=HS256
+```
 
-# Define el tiempo que deseas mantener a un usuario con la sesión activa. El valor va en minutos. Los usuarios que superen este límite tendrán que volver a iniciar sesión, como funciona en muchas aplicaciones.
+Define el tiempo que deseas mantener a un usuario con la sesión activa. El valor va en minutos. Los usuarios que superen este límite tendrán que volver a iniciar sesión, como funciona en muchas aplicaciones.
+```bash
 ACCESS_TOKEN_EXPIRE_MINUTES=300
+```
 
-# Estos son los valores de acceso a tu base de datos que actualmente gestionas en el servidor de Plesk.
+Estos son los valores de acceso a tu base de datos que actualmente gestionas en el servidor de Plesk.
+```bash
 POSTGRES_SERVER=localhost
 POSTGRES_PORT=5432
 POSTGRES_USER=postgres
@@ -174,8 +183,6 @@ El frontend de esta aplicación está desarrollado con Angular. A continuación,
 ### Notas Adicionales
 
 - **Actualizaciones:** Cada vez que realices cambios en el código fuente, repite los pasos de construcción y despliegue para asegurarte de que la versión más reciente esté disponible en el servidor.
-- **Optimización:** Considera optimizar la aplicación para mejorar los tiempos de carga y el rendimiento general. Esto puede incluir la minificación de archivos CSS y JavaScript, y la configuración de caché en el servidor.
 
 ---
 
-Esta sección proporciona una guía clara para desplegar una aplicación Angular en un servidor Plesk, incluyendo la creación de un repositorio en GitHub y la configuración previa del servidor. Si necesitas más detalles o tienes alguna otra pregunta, no dudes en decírmelo.
