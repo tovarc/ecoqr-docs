@@ -1,9 +1,8 @@
-Documentación del Backend
+# Documentación del Backend
 
 Lo primero que debes configurar son las variables de entorno siguiendo esta estructura:
 
 Este valor se usa para configurar los JWT tokens que gestionan la autenticación. Puedes generar una clave secreta usando el comando 'openssl rand -hex 32' en la terminal o usar una de tu preferencia, pero debe ser segura.
-
 
 ```bash
 SECRET_KEY=secret
@@ -16,11 +15,13 @@ ALGORITHM=HS256
 ```
 
 Define el tiempo que deseas mantener a un usuario con la sesión activa. El valor va en minutos. Los usuarios que superen este límite tendrán que volver a iniciar sesión, como funciona en muchas aplicaciones.
+
 ```bash
 ACCESS_TOKEN_EXPIRE_MINUTES=300
 ```
 
 Estos son los valores de acceso a tu base de datos que actualmente gestionas en el servidor de Plesk.
+
 ```bash
 POSTGRES_SERVER=localhost
 POSTGRES_PORT=5432
@@ -97,29 +98,18 @@ Para asegurar que el proyecto se ejecute en un entorno aislado y sin conflictos 
 - Asegúrate de mantener actualizadas las dependencias del proyecto para evitar vulnerabilidades de seguridad.
 - Considera implementar monitoreo y alertas para detectar caídas o comportamientos inusuales en el servidor.
 - Realiza copias de seguridad periódicas de la base de datos para evitar pérdida de datos.
-```
 
-Puedes copiar y pegar este contenido en tu archivo `README.md`. Si necesitas más ajustes o tienes alguna otra pregunta, no dudes en decírmelo.
-```
-
-
-
-
-Aquí tienes la sección actualizada para la documentación del frontend, indicando que la configuración en el servidor Plesk ya está realizada:
-
----
-
-## Documentación del Frontend
+# Documentación del Frontend
 
 El frontend de esta aplicación está desarrollado con Angular. A continuación, se detallan los pasos para instalar las dependencias, construir la aplicación y desplegarla en un servidor Plesk.
 
-### Requisitos Previos
+## Requisitos Previos
 
 - Asegúrate de tener instalado [Node.js](https://nodejs.org/) y [npm](https://www.npmjs.com/) en tu máquina.
 - Tener acceso a un servidor Plesk donde desplegar la aplicación.
 - Crear una cuenta en [GitHub](https://github.com/) si aún no tienes una.
 
-### Pasos para Instalar y Desplegar
+## Pasos para Instalar y Desplegar
 
 1. **Crear un Repositorio en GitHub:**
    - Inicia sesión en tu cuenta de GitHub.
@@ -178,9 +168,6 @@ El frontend de esta aplicación está desarrollado con Angular. A continuación,
    - Asegúrate de que todos los archivos se hayan subido correctamente.
    - Abre un navegador web y accede a la URL de tu dominio para verificar que la aplicación Angular se esté ejecutando correctamente.
 
-### Notas Adicionales
+## Notas Adicionales
 
 - **Actualizaciones:** Cada vez que realices cambios en el código fuente, repite los pasos de construcción y despliegue para asegurarte de que la versión más reciente esté disponible en el servidor.
-
----
-
